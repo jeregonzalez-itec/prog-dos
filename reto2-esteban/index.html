@@ -1,35 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></Cv de estebanMalpassi></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Currículum — Esteban Malpassi</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="poppins-regular">
-   <div id="logo">
-        <img src="esteban.jpeg" alt="foto de perfil">
-      </div>
-   <nav>
-        <h2>curriculum de Esteban Malpassi</h2>
-        <ul> <class="poppins-semi-bold">
-            <li><a href="/index.html">inicio</a></li>
-            <li><a href="/about.html" >sobre mi</a></li>
-            <li><a href="/habilidad.html">experiencia y habilidades</a></li>
-            <li><a href="/educacion.html">educacion</a></li>
-            <li><a href="/contacto.html">contacto</a></li>
-        </ul>
-   <main>
-        <h2>bienvenido a mi curriculum</h2>
-        <p>curriculum de Esteban Malpassi, desarrollador web en proceso de aprendizaje.</p>
-   </main>
-    <footer>
-        <h2>contacto</h2>
-        <p>e.malpassi@itecriocuarto.org.ar</p>
-    </footer>
+<body>
+    <div id="contenedora">
+
+        <header id="logo">
+            <div class="header-inner">
+                <div class="header-left">
+                    <img class="foto-cv" src="esteban.jpeg" alt="Foto de Esteban Malpassi">
+                    <div class="header-text">
+                        <h1>Esteban Malpassi</h1>
+                        <p>Desarrollador web · Front-end en formación</p>
+                    </div>
+                </div>
+                <div class="header-contact">
+                    <p class="contact-line">Ciudad, País</p>
+                    <p class="contact-line">e.malpassi@itecriocuarto.org.ar</p>
+                </div>
+            </div>
+        </header>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html#perfil">Perfil</a></li>
+                <li><a href="index.html#experiencia">Experiencia</a></li>
+                <li><a href="educacion.html">Educación</a></li>
+                <li><a href="habilidad.html">Habilidades</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main id="contenido">
+            <section id="perfil" class="section">
+                <h1>Resumen profesional</h1>
+                <p class="profile">Desarrollador web con interés en interfaces modernas y accesibles. Experiencia en proyectos personales y formación en HTML, CSS y JavaScript. Busco prácticas y proyectos donde aplicar y ampliar mis conocimientos.</p>
+            </section>
+
+            <section id="experiencia" class="section">
+                <h2>Experiencia laboral</h2>
+                <article class="job">
+                    <h3 class="title">Desarrollador Front-end (proyectos personales)</h3>
+                    <p class="meta">mar 2023 — presente · Remoto</p>
+                    <ul>
+                        <li>Diseño y maquetación usando HTML/CSS.</li>
+                        <li>Interactividad con JavaScript y pequeñas aplicaciones web.</li>
+                        <li>Uso de control de versiones con Git.</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <h3 class="title">Prácticas / Freelance</h3>
+                    <p class="meta">ene 2022 — feb 2023</p>
+                    <ul>
+                        <li>Colaboración en mantenimiento de sitios estáticos y correcciones de estilo.</li>
+                        <li>Optimización básica de rendimiento y accesibilidad.</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <aside id="lateral">
+            <section id="contacto" class="contact-info section">
+                <h2>Información</h2>
+                <p>Esteban Malpassi</p>
+                <p>e.malpassi@itecriocuarto.org.ar</p>
+                <p>+54 9 358 ...</p>
+                <p>Ciudad, Provincia</p>
+            </section>
+
+            <section id="habilidades" class="section">
+                <h2>Habilidades</h2>
+                <div class="skills">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Git</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Idiomas</h2>
+                <ul>
+                    <li>Español — Nativo</li>
+                    <li>Inglés — Intermedio</li>
+                </ul>
+            </section>
+        </aside>
+
+        <div id="limpiar"></div>
+
+        <footer id="pie">
+            <p>© 2026 Esteban Malpassi — Disponible para contacto y proyectos</p>
+        </footer>
+
+    </div> <!-- /contenedora -->
+
+    <script>
+        // Navegación por hash: muestra la sección si el hash existe en esta página
+        (function(){
+            const links = document.querySelectorAll('#menu a');
+            const sections = document.querySelectorAll('.section');
+
+            function normalizeHash(h){
+                if(!h) return null;
+                if(h.indexOf('#')>=0) return h.substring(h.indexOf('#'));
+                return null;
+            }
+
+            function setActiveLink(hash){
+                links.forEach(a=> a.classList.toggle('active', normalizeHash(a.getAttribute('href'))===hash));
+            }
+
+            function showSection(hash){
+                if(!hash) hash = '#perfil';
+                sections.forEach(s=> s.classList.add('hidden'));
+                const target = document.querySelector(hash);
+                if(target) target.classList.remove('hidden');
+                setActiveLink(hash);
+                if(location.hash !== hash) history.replaceState(null,'',hash);
+            }
+
+            links.forEach(link=>{
+                link.addEventListener('click', function(e){
+                    const h = normalizeHash(this.getAttribute('href'));
+                    if(h){ e.preventDefault(); showSection(h); }
+                });
+            });
+
+            window.addEventListener('DOMContentLoaded', ()=>{
+                const startHash = location.hash || '#perfil';
+                showSection(startHash);
+            });
+        })();
+    </script>
 </body>
-</html>                
-        
+</html>
+                                    </ul>

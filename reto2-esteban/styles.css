@@ -1,83 +1,184 @@
+/* CV-oriented stylesheet
+   Mantiene los IDs y la estructura original pero adapta colores,
+   tipografía y añade utilidades para secciones de currículum.
+*/
 body{
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background:#f4f6f8;
+  color:#222;
+  line-height:1.45;
+  margin: 20px;
   position:relative;
-  width: 900px;;
-  height:100%;
-  border:solid 5px black;
-  background-color:#990000;
-  margin: 20px auto 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
 }
-#logo{
-  padding:10px;
-  width:880px;
-  height:100px;
-  background-color:#99FF00;
+
+/* contenedor principal: mantiene ancho similar pero responsive */
+#contenedora-1{
+  width:900px;
+  height: 900px;
+  margin:20px auto 40px auto;
+  background:#fff;
+  border-radius:6px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  box-sizing:border-box;
+  overflow:hidden;
+  border:1px solid #e0e3e6;
+}
+
+.foto-cv{
+   width:72px; 
+   height:72px; 
+   object-fit:cover; 
+   border-radius:50%; 
+   border:3px solid rgba(255,255,255,0.12); 
+   float:left; 
+   margin-right:18px; }
+
+        
+#contenedora-2{
+  padding:22px 24px;
+  width:100%;
+  height:auto;
+  background:#0b3d91; /* azul profesional */
+  color:#fff;
   float:left;
+  box-sizing:border-box;
 }
-{
-  esteban.jpeg{
-    width: 100px;
-    height: 100px;
-  }
-}
+
+#contenedora-2 h1{
+   margin:0;
+   font-size:28px; 
+   letter-spacing:0.5px; }
+#contenedora-2 p{ 
+  margin:4px 0 0 0; 
+  color:rgba(255,255,255,0.9); }
+
+.contenedora-3{
+   display:flex; 
+   align-items:center; 
+   justify-content:space-between; }
+.header-text{
+   color:#fff; }
+.header-text h1{
+   margin:0;
+   font-size:24px; }
+.header-text p{
+   margin:4px 0 0 0; 
+   opacity:0.95; }
+
+   
 #menu{
-  padding:10px;
-  width:880px;
-  height:50px;
-  background-color:#0099FF;
+  padding:10px 20px;
+  width:100%;
+  height:auto;
+  background:#f7fafc;
   float:left;
+  box-sizing:border-box;
+  border-bottom:1px solid #eef2f6;
 }
-#contenido{
-  padding:10px;
-  width:580px;
-  height:350px;
-  background-color:#FFFF00;
-  float:left;
+
+#menu ul{ 
+  list-style:none; 
+  text-align:center; 
+  margin:0; 
+  padding:0; 
 }
-#lateral{
-  padding:10px;
-  width:280px;
-  height:350px;
-  background-color:#CC3399;
-  float:left;
-}
-#pie{
-  padding:10px;
-  width:880px;
-  height:50px;
-  background-color:#330066;
-  float:left;
-}
-#limpiar{
-  clear:both;
-}
-#contenido h1{
-  text-align:center;
-  font-size:20px;
-  color:#000;
-}
-h1{
-  text-align:center;
-  font-size:15px;
-  color:#ccc;
-}
-ul{ list-style: none; text-align:center; }
-ul li{ display:inline; }
-li a{
-  padding:20px;
-  color:white;
+#menu ul li{
+   display:inline-block; 
+   margin:0 6px; }
+#menu li a{
+  display:inline-block;
+  padding:8px 14px;
+  color:#0b3d91;
   text-decoration:none;
-  background-color:#e44d26;
+  border-radius:4px;
+  transition:background .18s, color .18s;
 }
-hr { 
-  display: block; 
-  border-top: 10px solid red; 
-  margin: 10px 0px; 
-  padding: 0px; 
+#menu li a:hover{
+   background:#e8f0ff; }
+
+
+#contenido{
+  padding:18px;
+  width:60%; /* ~580/960 */
+  min-height:350px;
+  background:transparent;
+  float:left;
+  box-sizing:border-box;
 }
-a { color: #fff; }
-a:visited { color: pink; }
-a:focus { outline: 2px dotted; }
-a:hover, a:active { outline: 0; 
-background-color: green; color: #000; 
+
+#lateral{
+  padding:18px;
+  width:40%; /* ~280/960 */
+  min-height:350px;
+  background:#fbfcfe;
+  float:left;
+  box-sizing:border-box;
+  border-left:1px solid #eef2f6;
 }
+
+
+#pie{
+  padding:12px 18px;
+  width:100%;
+  height:auto;
+  background:#f7fafc;
+  float:left;
+  box-sizing:border-box;
+  border-top:1px solid #eef2f6;
+  color:#667085;
+  font-size:13px;
+}
+
+#limpiar{ clear:both; }
+
+/* Tipografía para secciones del CV */
+h1{ text-align:left; font-size:18px; color:#0b3d91; margin:0 0 12px 0; }
+h2{ font-size:16px; margin:8px 0; color:#102a43; }
+p{ margin:0 0 10px 0; }
+
+#contenido h1{ text-align:left; font-size:20px; color:#0b3d91; }
+
+/* utilidades específicas de CV (no dependen de HTML existente, pero pueden usarse si se añaden) */
+.profile{ margin-bottom:12px; }
+.contact-info{ font-size:14px; color:#334155; }
+.section{ margin-bottom:18px; }
+.job{ margin-bottom:12px; }
+.job .title{ font-weight:700; color:#0b3d91; }
+.job .meta{ font-size:13px; color:#5b6b78; }
+.skills{ display:flex; flex-wrap:wrap; gap:8px; }
+.skill{ background:#eef6ff; color:#0b3d91; padding:6px 10px; border-radius:16px; font-size:13px; }
+
+/* HR más sutil para separación de secciones */
+hr{ display:block; border:none; border-top:2px solid #eef2f6; margin:12px 0; }
+
+/* enlaces */
+a{ color:#0b3d91; }
+a:visited{ color:#0b3d91; }
+a:focus{ outline:2px dotted rgba(11,61,145,0.35); }
+a:hover, a:active{ text-decoration:underline; }
+
+/* Impresión: ocultar elementos de navegación y ajustar para papel */
+
+
+/* Responsive: apilar columnas en pantallas pequeñas */
+
+/* Helpers para la navegación por secciones */
+.section.hidden{ display:none; }
+#menu li a.active{ background:#0b3d91; color:#fff; }
+
+/* Estilos trasladados desde HTML para la cabecera y la foto */
+.foto-cv{ width:72px; height:72px; object-fit:cover; border-radius:50%; border:3px solid rgba(255,255,255,0.12); margin-right:18px; }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; }
+.header-left{ display:flex; align-items:center; }
+.header-text{ color:#fff; }
+.header-text h1{ margin:0; font-size:24px; }
+.header-text p{ margin:4px 0 0 0; opacity:0.95; }
+
+/* Estructura básica para contenido principal y lateral cuando se usa en páginas separadas */
+#contenido{ padding:18px; box-sizing:border-box; }
+#lateral{ padding:18px; box-sizing:border-box; }
+
+/* Navegación del menú (sin estilos inline) */
+#menu ul{ margin:0; padding:0; }
+#menu ul li{ display:inline-block; }
+#menu ul li a{ padding:8px 14px; }
