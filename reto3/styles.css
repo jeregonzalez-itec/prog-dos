@@ -24,6 +24,10 @@ header {
     align-items: flex-start;
     gap: 10px;
 }
+.logo {
+    width: 50px;
+    height: 50px;
+}
 nav {
     margin-left: auto;
 }
@@ -45,4 +49,66 @@ li, a{
     text-align: center;
     margin: 50px 0 0 0 ;
     padding: 100px;
+}
+.products {
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 200px;
+}
+.product-card {
+    background-color: white;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    width: 400px;
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+.product-image, img{
+    width: 150px;
+    height:150px;
+    align-self: center;
+}
+
+.product-info {
+    margin: 5px 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+p {
+    margin: 5px 0;
+}
+.product-card button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+.features {
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 100px 0 100px 0;
+}
+.feature-card {
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
