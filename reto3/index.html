@@ -1,83 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reto 3</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+    <title>Brand</title>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img class="logo" src="images/logo.png" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">Faqs</a></li>
-                <li><a href="">Productos y descripcion</a></li>
+    <header class="site-header">
+        <nav class="top-nav">
+            <a class="logo" href="#">
+              <img src="images/logo.png" alt="Brand logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Faqs</a></li>
+                <li><a href="#">Producto y descripción</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <p>Este es un producto increible, no se que haces viendo que lo puedes tener</p>
-        </section>
-    </main>
-    <section class="products">
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/box1.png" alt="Producto 1"/>
-            </div>
-            <div class="product-info">
-                <p>Producto 1</p>
-                <p>Descripción del producto 1</p>
-            </div>
-            <button class="buy-button">Comprar</button>
-        </div>
-          <div class="product-card">
-            <div class="product-image">
-                <img src="images/box2.png" alt="Producto 2"/>
-            </div>
-            <div class="product-info">
-                <p>Producto 2</p>
-                <p>Descripción del producto 2</p>
-            </div>
-                <button class="buy-button">Comprar</button>
-            </div>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Este es un producto increíble, no se qué haces viendo que lo puedes tener</h1>
+      </div>
     </section>
-    <section class="features">
-        <div class="feature-card">
-            <div class="product-image">
-                <img src="images/box1.png" alt="Producto 1"/>
-            </div>
-            <div class="product-info">
-                <p>Producto 1</p>
-                <p>Descripción del producto 1</p>
-            </div>
-            
-        </div>
-          <div class="feature-card">
-            <div class="product-image">
-                <img src="images/box2.png" alt="Producto 2"/>
-            </div>
-            <div class="product-info">
-                <p>Producto 2</p>
-                <p>Descripción del producto 2</p>
-            </div>
-            
-            </div>
-            <div class="feature-card">
-            <div class="product-image">
-                <img src="images/box1.png" alt="Producto 1"/>
-            </div>
-            <div class="product-info">
-                <p>Producto 1</p>
-                <p>Descripción del producto 1</p>
-            </div>
-           
-        </div>
 
-        </section>
+    <section class="product-cards" aria-label="Productos destacados">
+      <div class="background-products">
+        <img src="images/curve.png" alt="">
+      </div>
+      <article class="product-card">
+        <img src="images/box1.png" alt="Producto 1">
+        <h2>Producto 1</h2>
+        <p>Miles de productos hay en el mercado, pero nada como una caja con gatitos.</p>
+        <a class="cta-button" href="#">Lo quiero</a>
+      </article>
+
+      <article class="product-card">
+        <img src="images/box2.png" alt="Producto 2">
+        <h2>Producto 2</h2>
+        <p>Miles de productos hay en el mercado, pero nada como una caja con gatitos.</p>
+        <a class="cta-button" href="#">Lo quiero</a>
+      </article>
+    </section>
+
+    <section class="highlights" aria-label="Beneficios">
+      <article class="feature-card">
+        <img src="images/b1.png" alt="Icono suavecito">
+        <h3>Los más suavecitos</h3>
+        <p>Miles de productos hay en el mercado, pero nada como una caja con gatitos.</p>
+      </article>
+      <article class="feature-card">
+        <img src="images/b2.png" alt="Icono increíble">
+        <h3>Lo más increíble</h3>
+        <p>Miles de productos hay en el mercado, pero nada como una caja con gatitos.</p>
+      </article>
+      <article class="feature-card">
+        <img src="images/b3.png" alt="Icono confiable">
+        <h3>Lo más confiable</h3>
+        <p>Miles de productos hay en el mercado, pero nada como una caja con gatitos.</p>
+      </article>
+    </section>
+    <section class="mentions" aria-labelledby="mentions-title">
+      <hr>
+      <div class="section-header">
+        <h2 id="mentions-title">Menciones</h2>
+      </div>
+      <div class="mention-cards">
+        <article class="mention-card">
+          <img src="images/p1.png" alt="Mario foto">
+          <div class="mention-content">
+            <h3>Mario</h3>
+            <p>Miles de productos hay en el mercado, pero nada como una caja con gatitos.</p>
+          </div>
+        </article>
+        <article class="mention-card">
+          <img src="images/p2.png" alt="Julia foto">
+          <div class="mention-content">
+            <h3>Julia</h3>
+            <p>Miles de productos hay en el mercado, pero nada como una caja con gatitos.</p>
+          </div>
+        </article>
+        <article class="mention-card">
+          <img src="images/p3.png" alt="Carla foto">
+          <div class="mention-content">
+            <h3>Carla</h3>
+            <p>Miles de productos hay en el mercado, pero nada como una caja con gatitos.</p>
+          </div>
+        </article>
+        <article class="mention-card">
+          <img src="images/p4.png" alt="Sonia foto">
+          <div class="mention-content">
+            <h3>Sonia</h3>
+            <p>Miles de productos hay en el mercado, pero nada como una caja con gatitos.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Términos y condiciones</p>
+    <p>contacto@brand.com</p>
+  </footer>
 </body>
 </html>
