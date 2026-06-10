@@ -6,50 +6,103 @@
     <title>AMATEAR-CBA</title>
     <link rel="stylesheet" href="css/estilos.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
   </head>
 <body>
-  <header>
-   <div class="flex my-auto justify-center bg-verde-amatear">
-      <h1 class="text-white  bg-verde-amatear text-sm lg:text-xs">-10% OFF EN EFECTIVO O EN TRANSFERENCIA</h1>
+  <header class="fixed top-0 right-0 left-0 bg-body z-100">
+  <div class="flex my-auto justify-center bg-verde-amatear px-14">
+      <h1 class="text-white bg-verde-amatear text-xs lg:text-xs">-10% OFF EN EFECTIVO O EN TRANSFERENCIA</h1>
    </div>
    <nav class="relative after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-26 items-center justify-between">
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-       <div class="absolute inset-y-0 left-0 flex items-center">
-            <div class="h-full overflow-hidden">
-              <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="max-h-full w-60 scale-150 object-contain" />
+      <div class="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
+        <div class="relative flex h-26 items-center justify-between">
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="absolute inset-y-0 left-0 flex items-center">
+              <div class="h-full overflow-hidden md:hidden">
+                <a href="index.html">
+                  <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="max-h-full w-60 scale-150 object-contain md:w-20" />
+                </a>
+              </div>
             </div>
-         </div>
-        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-          <div class="flex space-x-4">
-            <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-            <a href="#" aria-current="page" class="rounded-md px-3 text-gray-900 py-2 text-sm font-medium ">Inicio</a>
-            <a href="#" class="px-3 py-2 text-sm font-medium text-gray-900 hover:bg-white/5 hover:text-white">Productos</a>
-            <a href="#" class="px-3 py-2 text-sm font-medium text-gray-900 hover:bg-white/5 hover:text-white">tips</a>
-            <a href="#" class="px-3 py-2 text-sm font-medium text-gray-900 hover:bg-white/5 hover:text-white">Contacto</a>
+            <div class="hidden md:flex w-full items-center px-40 my-15">
+              <div class="flex items-center gap-x-20">
+                <div class="h-full overflow-hidden">
+                  <a href="index.html">
+                    <img
+                        src="img/logo-amatear.jpeg"
+                        alt="Logo AMATEAR"
+                        class="w-22 scale-200 mx-2 object-contain"
+                    />
+                  </a>
+                </div>
+                <div class="flex space-x-3">
+                  <a href="#" aria-current="page" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600">
+                      Inicio
+                  </a>
+
+                  <a href="#" class="px-3 py-2 text-sm font-medium text-gray-600">
+                      Productos
+                  </a>
+                  <a href="#" class="px-3 py-2 text-sm font-medium text-gray-600">
+                      Tips
+                  </a>
+                  <a href="#" class="px-3 py-2 text-sm font-medium text-gray-600">
+                      Contacto
+                  </a>
+                </div>
+
+              </div>
+              <div class="ml-auto flex items-center gap-x-10">
+                <img src="img/search-line-icon.svg" alt="Buscar"class="h-5"/>
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-user">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                          <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                <div class="relative">
+                          <span class="absolute -top-3 -right-3 flex h-5 w-5 items-center justify-center text-xs text-black">
+                            0
+                          </span>
+
+                          <img
+                            src="img/bag-3-svgrepo-com.svg"
+                            alt="Carrito"
+                            class="h-6"
+                          />
+                        </div>
+
+                      </div>
+
+                    </div>
+             </div>
+          
+          <div class="absolute inset-y-0 gap-x-4 right-4 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-black lg:hidden">
+                <span class="absolute -inset-0.5 "></span>
+                <span class="sr-only">Open main menu</span>
+                <img src="img/menu-hotdog-svgrepo-com.svg" class="h-6" alt="">
+              </button>
+            <img src="img/search-line-icon.svg" alt="Logo AMATEAR" class="h-6 md:hidden" />
+            <div class=" relative  md:hidden">
+                  <span class="absolute -top-3 -right-3 flex h-5 w-5 items-center justify-center text-xs text-black">0</span>
+                  <img src="img/bag-3-svgrepo-com.svg" alt="Logo AMATEAR" class="h-6" />
+            </div>
           </div>
         </div>
       </div>
-        
-      <div class="absolute inset-y-0 gap-x-4 right-4 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-black lg:hidden">
-          <span class="absolute -inset-0.5 "></span>
-          <span class="sr-only">Open main menu</span>
-          <img src="img/menu-hotdog-svgrepo-com.svg" class="h-6" alt="">
-        </button>
-              <img src="img/search-line-icon.svg" alt="Logo AMATEAR" class="h-6" />
-              <div class="relative">
-                <span class="absolute -top-3 -right-3 flex h-5 w-5 items-center justify-center text-xs text-black">0</span>
-                <img src="img/bag-3-svgrepo-com.svg" alt="Logo AMATEAR" class="h-6" />
-              </div>
-      </div>
-    </div>
-  </div>
 
-      <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
-        <div class="bg-green-900/50 h-screen w-screen fixed inset-0 z-50"></div>
+    <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+      <div class="bg-green-900/50 h-screen w-screen fixed inset-0 z-50"></div>
         <div class="fixed inset-y-0 left-0 space-y-1 px-2 pt-2 pb-3 bg-white h-screen w-90 z-100">
           <div class="fixed top-0 right-0 p-4 ">
             <button type="button" command="--toggle" commandfor="mobile-menu" class="inline-flex items-center justify-center rounded-md p-1 text-white">
@@ -61,35 +114,47 @@
           </div>
         <div class="flex h-full top-0 flex-col items-start my-2 gap-y-6">
           <a href="#" aria-current="page" class="block rounded-md nav-links px-3 text-base ">Inicio</a>
-          <div class="flex items-center gap-x-2">
-          <a href="#" class="block rounded-md px-3 py-2 text-base nav-links hover:bg-white/5 hover:text-white">Productos</a>
-          <img src="img/arrow-right-svgrepo-com.svg" alt="" class="h-8 w-8 mx-40">
-          </div>
+            <div class="flex items-center gap-x-2">
+               <a href="#" class="block rounded-md px-3 py-2 text-base nav-links hover:bg-white/5 hover:text-white">Productos</a>
+              <img src="img/arrow-right-svgrepo-com.svg" alt="" class="h-8 w-8 mx-40">
+            </div>
           <a href="#" class="block px-3 py-2 text-base nav-links hover:bg-white/5 hover:text-white">tips</a>
           <a href="#" class="block px-3 py-2 text-base nav-links hover:bg-white/5 hover:text-white">Contacto</a>
         </div>
         <div class="fixed bottom-0 left-0 w-90 bg-white p-4">
           <hr class="my-2 border-gray-300/50">
            <div class="flex items-center gap-x-6 ">
-            <a href="#" class="text-xs  nav-links">Iniciar Sesion</a>
+            <a href="#" class="text-xs nav-links">Iniciar Sesion</a>
             <a href="#" class="text-xs nav-links">Crear Cuenta</a>
            </div>
         </div>
       </el-disclosure>
     </nav>
   </header>
+  <main >
+      <section class="mt-36 overflow-x-auto snap-x snap-mandatory">
+        <div class="flex w-max h-full">
+          <article class="snap-center w-96 shrink-0">
+            <img src="img/1img-banner.webp" alt="">
+          </article>
 
+          <article class="snap-center w-96 shrink-0">
+            <img src="img/2img-banner.webp" alt="">
+          </article>
 
-   <main>
-      <section>
-        <img src="img/disfrutaconamatear.jpeg" alt="Banner" class="w-full">
+        </div>
       </section>
       <div class="flex justify-center my-10">
-        <img src="img/arrow-left-lg-svgrepo-com.svg" alt="Anterior" class="h-6 mx-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+        </svg>
         <span class="text-md ">1</span>
         <span class="text-md mx-1">/</span>
         <span class="text-md ">2</span>
-        <img src="img/arrow-right-svgrepo-com.svg" alt="Siguiente" class="h-6 mx-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+        </svg>
+
       </div>
       <section class="my-4 mx-3">
         <article class="mx-6">
@@ -100,8 +165,8 @@
         <article class="mx-6">
           <div class="flex justify-center">
             <article class="relative">
-              <img class="h-50 w-full object-cover" src="img/diadelpadre-amatear.jpeg" alt="PROMOS">
-              <div class="absolute inset-0 bg-green-900/30 mix-blend-multiply"></div>
+              <img class="h-50 w-full object-cover" src="img/promos.webp" alt="PROMOS">
+              <div class="absolute inset-0 bg-body mix-blend-multiply"></div>
               <div class="absolute inset-0 flex items-center justify-center px-4">
                 <p class="titulo verde text-3xl font-bold text-white text-center">
                 PROMOS
@@ -114,7 +179,7 @@
         <article class="mx-6">
           <div class="flex justify-center">
             <article class="relative">
-              <img class="h-50 w-full object-cover" src="img/diadelpadre-amatear.jpeg" alt="MATES">
+              <img class="h-50 w-full object-cover" src="img/mates.webp" alt="MATES">
               <div class="absolute inset-0 bg-gray-500/30 mix-blend-multiply"></div>
               <div class="absolute inset-0 flex items-center justify-center px-4">
                 <p class="titulo verde text-3xl font-bold text-white text-center">
@@ -126,9 +191,9 @@
         </article>
          <article class="mx-6">
           <div class="flex justify-center">
-            <article class="relative">
-              <img class="h-50 w-full object-cover" src="img/diadelpadre-amatear.jpeg" alt="MATES">
-              <div class="absolute inset-0 bg-green-900/30 mix-blend-multiply"></div>
+            <article class="relative overflow-hidden">
+              <img class="h-50 w-full object-cover scale-100" src="img/termos.webp" alt="MATES">
+              <div class="absolute inset-0 bg-body mix-blend-multiply"></div>
               <div class="absolute inset-0 flex items-center justify-center px-4">
                 <p class="titulo verde text-3xl font-bold text-white text-center">
                   TERMOS
@@ -151,14 +216,14 @@
   <section class="grid grid-cols-2 md:grid-cols-3 gap-4 mx-3 my-4 md:mx-48 mb-24">
          <article class="mx-6">
           <div class="h-50 overflow-hidden md:h-full overflow-hidden">
-            <img class="h-full w-full object-cover" src="img/diadelpadre-amatear.jpeg" alt="DIA DEL PADRE">
+            <img class="h-full w-full object-cover" src="img/matepersonalizado1-2.webp" alt="DIA DEL PADRE">
           </div>
           <div class="flex flex-col items-center my-2  w-full">
           <p class="nav-links text-sm w-full text-center">PERSONALIZADO MUNDIAL 2026</p>
           <p class=" nav-links text-sm mt-1">$35.000</p>
           <p class=" nav-links text-xs w-full">$28.000 con transferencia o deposito</p>
           <div class="flex items-center gap-2">
-             <a href="#" class="nav-links underline">Comprar</a>
+             <a href="/product-details/personalizado1.html" class="nav-links underline">Comprar</a>
              <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
             </div>
           </div>
@@ -197,11 +262,11 @@
           </div>
         </article>
   </section>
-  
+  <section>
         <div class="mt-20 w-full ">
           <h2 class="verde mx-auto text-xl text-center">Novedades</h2>
         </div>
-    <section class="grid grid-cols-2 md:grid-cols-2 gap-4 mx-3 mt-8 mb-20">
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-4 mx-3 mt-8 my-2">
          <article class="mx-6">
           <div class="h-50 overflow-hidden">
             <img class="h-full w-full object-cover" src="img/diadelpadre-amatear.jpeg" alt="DIA DEL PADRE">
@@ -214,7 +279,6 @@
              <a href="#" class="nav-links underline">Comprar</a>
              <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
             </div>
-          </div>
           </div>
         </article>
         <article class="mx-6">
@@ -234,12 +298,54 @@
             </div>
           </div>
         </article>
+      </div>
+         <div class="flex justify-center my-8 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+            </svg>
+            <span class="text-md ">1</span>
+            <span class="text-md mx-1">/</span>
+            <span class="text-md ">8</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mx-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+          </div>
+  </section>
+  <section class="bg-white h-full">
+    <article class="relative flex flex-col justify-center h-80 gap-6 ">
+       <div class="mx-auto">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package">
+          <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/>
+          <path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/>
+        </svg>
+        </div>
+      <div class="mx-auto">
+      <div class="text-center">
+        <p class="paytoneOne text-2xl mb-2">ENVIOS A TODO EL PAIS</p>
+        <span>compra sin salir de tu casa</span>
+      </div>
+     </div>
+      <div class="flex flex-row gap-x-8 mx-auto">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+        </svg>
+
+        </div>
+        <div>
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+        </svg>
+
+        </div>
+      </div>
+    </article>
   </section>
 
   <footer class="footer-color h-full text-center text-white py-4">
     <div class="flex flex-col justify-center gap-y-8 my-3">
       <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="h-10 mx-auto">
-      <a href=""></a>
+      <i class="fa-brands fa-instagram"></i>
       <span class="text-sm">543584394590</span>
       <span class="text-sm">3584394590</span>
       <span class="text-sm">amatear.cba.ar@gmail.com</span>
@@ -247,9 +353,20 @@
     </div>
     <p class="text-xs text-center mt-10">© 2024 AMATEAR.CBA Todos los derechos reservados.</p>
     <!-- boton flotante de whatsapp NO BORRAR-->
-    <a href="" class="fixed bottom-6 right-4 bg-green-500 text-white text-xs font-bold p-2 rounded-full">
-      <img src="img/whatsapp-icon-svgrepo-com.svg" alt="" class="h-8 w-8 ">
-    </a>
+   <a
+  href="https://wa.me/549358XXXXXXX"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="fixed bottom-6 right-4 z-50
+         flex items-center justify-center
+         h-12 w-12 rounded-full
+         bg-green-600 text-white
+         shadow-lg
+         hover:scale-110 hover:bg-green-600
+         transition-all duration-300"
+>
+  <i class="fa-brands fa-whatsapp text-3xl"></i>
+</a>
   </footer>
 </body>
 </html>
