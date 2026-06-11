@@ -5,6 +5,7 @@
     --font-family: 'Instrument Sans', sans-serif;
     --font-2-family: 'Paytone One', sans-serif;
     --footer-background:#2D3E46;
+    --bg-color-add-cart:#2D3E46;
 }
 .paytoneOne{
     font-family: var(--font-2-family);
@@ -33,4 +34,7 @@ body{
 }
 .footer-color{
     background-color: var(--footer-background);
+}
+.p-detail-add-cart{
+    background-color: var(--bg-color-add-cart);
 }
