@@ -9,80 +9,51 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="min-h-screen bg-base-100 text-base-content">
-  <header class="navbar fixed top-0 z-50 w-full bg-base-100 shadow-sm">
-    <div class="flex w-full items-center justify-center bg-primary px-4 py-2">
-      <h1 class="text-xs text-primary-content">-10% OFF EN EFECTIVO O EN TRANSFERENCIA</h1>
+  <header class="card">
+    <div class="alert alert-success shadow-lg rounded-none justify-center">
+    <div>
+      <span>-10% OFF EN EFECTIVO O EN TRANSFERENCIA</span>
     </div>
-    <nav class="w-full border-b border-base-300">
-      <div class="container mx-auto px-2 md:px-6 lg:px-8">
-        <div class="navbar flex h-24 items-center justify-between">
-          <div class="navbar-start hidden md:flex">
-            <div class="flex items-center gap-x-20">
-              <div class="overflow-hidden">
-                <a href="index.html">
-                  <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="mx-2 w-24 object-contain" />
-                </a>
-              </div>
-              <ul class="menu menu-horizontal gap-2 p-0">
-                <li><a href="#" class="rounded-btn px-3 py-2 text-sm text-base-content/70 hover:bg-base-200 hover:text-base-content">Inicio</a></li>
-                <li><a href="#productos" class="rounded-btn px-3 py-2 text-sm text-base-content/70 hover:bg-base-200 hover:text-base-content">Productos</a></li>
-                <li><a href="#" class="rounded-btn px-3 py-2 text-sm text-base-content/70 hover:bg-base-200 hover:text-base-content">Tips</a></li>
-                <li><a href="#" class="rounded-btn px-3 py-2 text-sm text-base-content/70 hover:bg-base-200 hover:text-base-content">Contacto</a></li>
-              </ul>
-            </div>
-          </div>
+    </div>
 
-          <div class="navbar-center md:hidden">
-            <a href="index.html">
-              <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="w-24 object-contain" />
-            </a>
-          </div>
-
-          <div class="navbar-end flex items-center gap-x-4">
-            <img src="img/search-line-icon.svg" alt="Buscar" class="h-5" />
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-            <div class="indicator">
-              <span class="badge badge-sm badge-primary indicator-item">0</span>
-              <img src="img/bag-3-svgrepo-com.svg" alt="Carrito" class="h-6" />
-            </div>
-            <button type="button" command="--toggle" commandfor="mobile-menu" class="btn btn-ghost btn-circle lg:hidden">
-              <img src="img/menu-hotdog-svgrepo-com.svg" class="h-6" alt="Abrir menú" />
-            </button>
-          </div>
-        </div>
+    <nav class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
+    <div class="flex-1">
+      <a href="/index.html">
+        <img src="/img/logo-amatear.jpeg" alt="Logo AMATEAR" class="h-12 w-12 mr-2" />
+      </a>
+    </div>
+    <div class="hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Tips</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="flex-none gap-2">
+      <button class="btn btn-ghost btn-square">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button class="btn btn-ghost btn-square">
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <button class="btn btn-ghost btn-square indicator">
+        <span class="indicator-item">0</span>
+        <img src="/img/bag-3-svgrepo-com.svg" alt="Carrito" class="h-6" />
+      </button>
+      <div class="dropdown dropdown-end lg:hidden">
+        <label tabindex="0" class="btn">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Tips</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
       </div>
-
-      <el-disclosure id="mobile-menu" hidden class="block md:hidden">
-        <div class="fixed inset-0 z-50 bg-base-300/70"></div>
-        <div class="fixed inset-y-0 left-0 z-50 h-screen w-80 bg-base-100 p-4">
-          <div class="flex justify-end">
-            <button type="button" command="--toggle" commandfor="mobile-menu" class="btn btn-ghost btn-circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-8">
-                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="mt-6 flex h-full flex-col items-start gap-y-6">
-            <a href="#" class="rounded-btn px-3 py-2 text-base text-base-content">Inicio</a>
-            <div class="flex items-center gap-x-2">
-              <a href="#" class="rounded-btn px-3 py-2 text-base text-base-content">Productos</a>
-              <img src="img/arrow-right-svgrepo-com.svg" alt="" class="mx-4 h-8 w-8" />
-            </div>
-            <a href="#" class="rounded-btn px-3 py-2 text-base text-base-content">Tips</a>
-            <a href="#" class="rounded-btn px-3 py-2 text-base text-base-content">Contacto</a>
-          </div>
-          <div class="mt-auto border-t border-base-300 pt-4">
-            <div class="flex items-center gap-x-6">
-              <a href="#" class="text-xs text-base-content/70">Iniciar Sesion</a>
-              <a href="#" class="text-xs text-base-content/70">Crear Cuenta</a>
-            </div>
-          </div>
-        </div>
-      </el-disclosure>
-    </nav>
+    </div>
+  </nav>
   </header>
 
   <main class="pt-36">
