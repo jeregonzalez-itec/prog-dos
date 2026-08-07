@@ -1,327 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amatear.cba</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/logo-amatear.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body class="min-h-screen bg-base-100 text-base-content">
-  <header class="navbar fixed top-0 z-50 w-full bg-base-100 shadow-sm">
-    <div class="flex w-full items-center justify-center bg-primary px-4 py-2">
-      <h1 class="text-xs text-primary-content">-10% OFF EN EFECTIVO O EN TRANSFERENCIA</h1>
-    </div>
-    <nav class="w-full border-b border-base-300">
-      <div class="container mx-auto px-2 md:px-6 lg:px-8">
-        <div class="navbar flex h-24 items-center justify-between">
-          <div class="navbar-start hidden md:flex">
-            <div class="flex items-center gap-x-20">
-              <div class="overflow-hidden">
-                <a href="index.html">
-                  <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="mx-2 w-24 object-contain" />
-                </a>
-              </div>
-              <ul class="menu menu-horizontal gap-2 p-0">
-                <li><a href="#" class="rounded-btn px-3 py-2 text-sm text-base-content/70 hover:bg-base-200 hover:text-base-content">Inicio</a></li>
-                <li><a href="#productos" class="rounded-btn px-3 py-2 text-sm text-base-content/70 hover:bg-base-200 hover:text-base-content">Productos</a></li>
-                <li><a href="#" class="rounded-btn px-3 py-2 text-sm text-base-content/70 hover:bg-base-200 hover:text-base-content">Tips</a></li>
-                <li><a href="#" class="rounded-btn px-3 py-2 text-sm text-base-content/70 hover:bg-base-200 hover:text-base-content">Contacto</a></li>
-              </ul>
-            </div>
-          </div>
+<body>
 
-          <div class="navbar-center md:hidden">
-            <a href="index.html">
-              <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="w-24 object-contain" />
+  <div class="drawer">
+    <input id="mobile-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content">
+
+  
+      <header class="fixed top-0 inset-x-0 z-50">
+        <div class="flex justify-center bg-verde-amatear px-4 py-1">
+          <h1 class="text-white text-xs text-center">-10% OFF EN EFECTIVO O EN TRANSFERENCIA</h1>
+        </div>
+        <div class="navbar bg-body border-b border-black/10 px-2 md:px-10">
+          <div class="navbar-start">
+            <label for="mobile-drawer" class="btn btn-ghost btn-square lg:hidden" aria-label="Abrir menú">
+              <img src="img/menu-hotdog-svgrepo-com.svg" class="h-6" alt="">
+            </label>
+            <a href="index.html" class="hidden lg:flex items-center ml-4">
+              <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="h-16 w-auto object-contain" />
             </a>
           </div>
 
-          <div class="navbar-end flex items-center gap-x-4">
-            <img src="img/search-line-icon.svg" alt="Buscar" class="h-5" />
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+          <div class="navbar-center">
+            <a href="index.html" class="lg:hidden flex items-center">
+              <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="h-12 w-auto object-contain" />
+            </a>
+            <ul class="menu menu-horizontal hidden lg:flex nav-links gap-2 text-sm font-medium">
+              <li><a href="#" aria-current="page">Inicio</a></li>
+              <li><a href="#productos">Productos</a></li>
+              <li><a href="#">Tips</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="navbar-end gap-4">
+            <img src="img/search-line-icon.svg" alt="Buscar" class="h-5 hidden lg:block" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="hidden lg:block">
               <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
             <div class="indicator">
-              <span class="badge badge-sm badge-primary indicator-item">0</span>
+              <span class="indicator-item badge badge-neutral badge-xs">0</span>
               <img src="img/bag-3-svgrepo-com.svg" alt="Carrito" class="h-6" />
             </div>
-            <button type="button" command="--toggle" commandfor="mobile-menu" class="btn btn-ghost btn-circle lg:hidden">
-              <img src="img/menu-hotdog-svgrepo-com.svg" class="h-6" alt="Abrir menú" />
-            </button>
           </div>
         </div>
-      </div>
+      </header>
 
-      <el-disclosure id="mobile-menu" hidden class="block md:hidden">
-        <div class="fixed inset-0 z-50 bg-base-300/70"></div>
-        <div class="fixed inset-y-0 left-0 z-50 h-screen w-80 bg-base-100 p-4">
-          <div class="flex justify-end">
-            <button type="button" command="--toggle" commandfor="mobile-menu" class="btn btn-ghost btn-circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-8">
-                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+      
+      <main class="pt-27">
+
+        
+        <section class="carousel w-full">
+          <div id="slide1" class="carousel-item w-full">
+            <img src="img/1img-banner.webp" class="w-full object-cover" alt="Banner AMATEAR 1">
+          </div>
+          <div id="slide2" class="carousel-item w-full md:hidden">
+            <img src="img/2img-banner.webp" class="w-full object-cover" alt="Banner AMATEAR 2">
+          </div>
+        </section>
+        <div class="flex md:hidden justify-center items-center gap-6 my-6">
+          <a href="#slide1" class="btn btn-circle btn-ghost btn-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+            </svg>
+          </a>
+          <span class="text-sm">1 / 2</span>
+          <a href="#slide2" class="btn btn-circle btn-ghost btn-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+          </a>
+        </div>
+
+        
+        <section class="md:flex md:flex-col md:mx-25">
+          <div class="mx-3 my-4 md:px-15">
+            <div class="hero h-50 md:h-auto md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/diadelpadre-amatear.jpeg); background-size:cover; background-position:center;">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-3 md:gap-1">
+            <div class="hero h-40 md:h-40 md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/promos.webp); background-size:cover; background-position:center;">
+              <div class="hero-overlay"></div>
+              <div class="hero-content text-center">
+                <p class="paytoneOne verde text-3xl font-bold text-white">PROMOS</p>
+              </div>
+            </div>
+            <div class="hero h-40 md:h-40 md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/mates.webp); background-size:cover; background-position:center;">
+              <div class="hero-overlay bg-gray-500/40"></div>
+              <div class="hero-content text-center">
+                <p class="paytoneOne verde text-3xl font-bold text-white">MATES</p>
+              </div>
+            </div>
+            <div class="hero h-40 md:h-40 md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/termos.webp); background-size:cover; background-position:center;">
+              <div class="hero-overlay"></div>
+              <div class="hero-content text-center">
+                <p class="paytoneOne verde text-3xl font-bold text-white">TERMOS</p>
+              </div>
+            </div>
+          </div>
+
+          
+          <section class="my-16 w-full">
+            <h2 class="nav-links mx-10 text-center">
+              LA FELICIDAD,sabe a mate🧉.Mates de calidad premium,con los mejores accesorios y envios a todo el pais
+            </h2>
+          </section>
+
+          
+          <section id="productos" class="grid grid-cols-2 md:grid-cols-3 gap-4 mx-3 my-4 md:px-15 mb-8">
+            <div class="card bg-base-100">
+              <figure class="h-50 md:h-auto overflow-hidden">
+                <img class="w-full object-cover" src="img/matepersonalizado1-2.webp" alt="PERSONALIZADO MUNDIAL 2026">
+              </figure>
+              <div class="card-body items-center text-center p-2 gap-1">
+                <p class="nav-links text-sm">PERSONALIZADO MUNDIAL 2026 - IMPERIAL CUERO TALLADO</p>
+                <p class="nav-links text-sm">$35.000</p>
+                <p class="nav-links text-xs">$28.000 con transferencia o deposito</p>
+                <div class="card-actions items-center gap-2">
+                  <a href="personalizado1.html" class="nav-links underline text-sm">Comprar</a>
+                  <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100">
+              <figure class="h-50 md:h-auto overflow-hidden">
+                <img class="w-full object-cover" src="img/cuerocrudo.png" alt="IMPERIAL CUERO CRUDO">
+              </figure>
+              <div class="card-body items-center text-center p-2 gap-1">
+                <p class="nav-links text-sm">IMPERIAL CUERO CRUDO</p>
+                <p class="nav-links text-sm">$45.000</p>
+                <p class="nav-links text-xs">$36.000 con transferencia o deposito</p>
+                <div class="card-actions items-center gap-2">
+                  <a href="cuerocrudo.html" class="nav-links underline text-sm">Comprar</a>
+                  <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100">
+              <figure class="h-50 md:h-auto overflow-hidden">
+                <img class="w-full object-cover" src="img/mategrabadoalgarrobo.png" alt="IMPERIAL DE ALGARROBO CON GRABADO">
+              </figure>
+              <div class="card-body items-center text-center p-2 gap-1">
+                <p class="nav-links text-sm">IMPERIAL DE ALGARROBO CON GRABADO</p>
+                <p class="nav-links text-sm">$30.000</p>
+                <p class="nav-links text-xs">$24.000 con transferencia o deposito</p>
+                <div class="card-actions items-center gap-2">
+                  <a href="Algarrobograbado.html" class="nav-links underline text-sm">Comprar</a>
+                  <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          
+          <section>
+            <div class="mt-8 w-full">
+              <h2 class="verde text-xl text-center">Novedades</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mx-3 mt-8 my-2 md:px-15">
+              <div class="card bg-base-100">
+                <figure class="h-50 md:h-auto overflow-hidden">
+                  <img class="w-full object-cover" src="img/matepersonalizado1-2.webp" alt="PERSONALIZADO MUNDIAL 2026">
+                </figure>
+                <div class="card-body items-center text-center p-2 gap-1">
+                  <p class="nav-links text-sm">PERSONALIZADO MUNDIAL 2026 - IMPERIAL CUERO TALLADO</p>
+                  <p class="nav-links text-sm">$35.000,00</p>
+                  <p class="nav-links text-xs">$28.000,00 con transferencia o deposito</p>
+                  <div class="card-actions items-center gap-2">
+                    <a href="personalizado1.html" class="nav-links underline text-sm">Comprar</a>
+                    <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100">
+                <figure class="h-50 md:h-auto overflow-hidden">
+                  <img class="w-full object-cover" src="img/matepersonalizado1-2.webp" alt="PERSONALIZADO MUNDIAL 2026">
+                </figure>
+                <div class="card-body items-center text-center p-2 gap-1">
+                  <p class="nav-links text-sm">PERSONALIZADO MUNDIAL 2026 - IMPERIAL CUERO TALLADO</p>
+                  <p class="nav-links text-sm">$35.000,00</p>
+                  <p class="nav-links text-xs">$28.000,00 con transferencia o deposito</p>
+                  <div class="card-actions items-center gap-2">
+                    <a href="personalizado1.html" class="nav-links underline text-sm">Comprar</a>
+                    <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100">
+                <figure class="h-50 md:h-auto overflow-hidden">
+                  <img class="w-full object-cover" src="img/matepersonalizado1-2.webp" alt="PERSONALIZADO MUNDIAL 2026">
+                </figure>
+                <div class="card-body items-center text-center p-2 gap-1">
+                  <p class="nav-links text-sm">PERSONALIZADO MUNDIAL 2026 - IMPERIAL CUERO TALLADO</p>
+                  <p class="nav-links text-sm">$35.000,00</p>
+                  <p class="nav-links text-xs">$28.000,00 con transferencia o deposito</p>
+                  <div class="card-actions items-center gap-2">
+                    <a href="personalizado1.html" class="nav-links underline text-sm">Comprar</a>
+                    <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center items-center gap-6 my-8">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
               </svg>
-            </button>
-          </div>
-          <div class="mt-6 flex h-full flex-col items-start gap-y-6">
-            <a href="#" class="rounded-btn px-3 py-2 text-base text-base-content">Inicio</a>
-            <div class="flex items-center gap-x-2">
-              <a href="#" class="rounded-btn px-3 py-2 text-base text-base-content">Productos</a>
-              <img src="img/arrow-right-svgrepo-com.svg" alt="" class="mx-4 h-8 w-8" />
+              <span class="text-sm">1 / 8</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
             </div>
-            <a href="#" class="rounded-btn px-3 py-2 text-base text-base-content">Tips</a>
-            <a href="#" class="rounded-btn px-3 py-2 text-base text-base-content">Contacto</a>
-          </div>
-          <div class="mt-auto border-t border-base-300 pt-4">
-            <div class="flex items-center gap-x-6">
-              <a href="#" class="text-xs text-base-content/70">Iniciar Sesion</a>
-              <a href="#" class="text-xs text-base-content/70">Crear Cuenta</a>
+          </section>
+        </section>
+
+        
+        <section class="bg-white">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 bg-gray-100 py-10">
+            <div class="flex flex-col items-center justify-center gap-4 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/>
+                <path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/>
+              </svg>
+              <p class="paytoneOne text-2xl">ENVIOS A TODO EL PAIS</p>
+              <span>compra sin salir de tu casa</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 14h.01"/>
+                <path d="M7 7h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14"/>
+              </svg>
+              <p class="paytoneOne text-2xl">HASTA 3 CUOTAS</p>
+              <span>con todas las tarjetas</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="16" r="1"/>
+                <rect x="3" y="10" width="18" height="12" rx="2"/>
+                <path d="M7 10V7a5 5 0 0 1 10 0v3"/>
+              </svg>
+              <p class="paytoneOne text-2xl">COMPRA SEGURA</p>
+              <span>protegemos tus datos</span>
             </div>
           </div>
-        </div>
-      </el-disclosure>
-    </nav>
-  </header>
+        </section>
+      </main>
 
-  <main class="pt-36">
-    <section class="overflow-x-auto px-2 sm:px-4">
-      <div class="flex h-full w-full flex-col gap-2 md:hidden">
-        <article class="w-full overflow-hidden rounded-box"><img class="w-full object-cover" src="img/1img-banner.webp" alt="" /></article>
-        <article class="w-full overflow-hidden rounded-box"><img class="w-full object-cover" src="img/2img-banner.webp" alt="" /></article>
-      </div>
-      <div class="hidden md:flex">
-        <img class="w-full" src="img/1img-banner.webp" alt="" />
-      </div>
-    </section>
+      
+      <footer class="footer footer-color footer-center text-white p-10 gap-4">
+        <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="h-10">
+        <i class="fa-brands fa-instagram text-lg"></i>
+        <span class="text-sm">543584394590</span>
+        <span class="text-sm">3584394590</span>
+        <span class="text-sm">amatear.cba.ar@gmail.com</span>
+        <span class="text-sm">Colon 753</span>
+        <p class="text-xs mt-6">© 2024 AMATEAR.CBA Todos los derechos reservados.</p>
+      </footer>
 
-    <div class="my-10 flex justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-6 size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
-      </svg>
-      <span>1</span>
-      <span class="mx-1">/</span>
-      <span>2</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-6 size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-      </svg>
+      
+      <a href="https://api.whatsapp.com/send/?phone=5493584394590&text&type=phone_number&app_absent=0"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-circle btn-success fixed bottom-6 right-4 z-50 shadow-lg hover:scale-110 transition-all duration-300">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+      </a>
+
     </div>
-  </main>
 
-  <section class="px-3 md:mx-8 md:flex md:flex-col">
-    <section class="md:w-full md:px-15">
-      <section class="mx-3 my-4">
-        <article class="mx-6 overflow-hidden rounded-box md:overflow-hidden">
-          <img class="h-50 w-full object-cover md:h-auto" src="img/diadelpadre-amatear.jpeg" alt="DIA DEL PADRE" />
-        </article>
-      </section>
-
-      <section class="mx-3 flex flex-col gap-4 md:h-40 md:flex-row md:gap-1">
-        <article class="mx-6 overflow-hidden rounded-box md:overflow-hidden">
-          <div class="relative">
-            <img class="h-auto w-full object-cover" src="img/promos.webp" alt="PROMOS" />
-            <div class="absolute inset-0 bg-base-300/30"></div>
-            <div class="absolute inset-0 flex items-center justify-center px-4">
-              <p class="text-center text-3xl font-bold text-white">PROMOS</p>
-            </div>
-          </div>
-        </article>
-        <article class="mx-6 overflow-hidden rounded-box md:overflow-hidden">
-          <div class="relative">
-            <img class="h-auto w-full object-cover" src="img/mates.webp" alt="MATES" />
-            <div class="absolute inset-0 bg-base-300/40"></div>
-            <div class="absolute inset-0 flex items-center justify-center px-4">
-              <p class="text-center text-3xl font-bold text-white">MATES</p>
-            </div>
-          </div>
-        </article>
-        <article class="mx-6 overflow-hidden rounded-box md:overflow-hidden">
-          <div class="relative">
-            <img class="h-auto w-full object-cover" src="img/termos.webp" alt="TERMOS" />
-            <div class="absolute inset-0 bg-base-300/30"></div>
-            <div class="absolute inset-0 flex items-center justify-center px-4">
-              <p class="text-center text-3xl font-bold text-white">TERMOS</p>
-            </div>
-          </div>
-        </article>
-      </section>
-    </section>
-
-    <section class="my-22 w-full">
-      <article class="mx-10">
-        <h2 class="mx-auto text-center text-base-content/80">
-          LA FELICIDAD,sabe a mate🧉.Mates de calidad premium,con los mejores accesorios y envios a todo el pais
-        </h2>
-      </article>
-    </section>
-
-    <section id="productos" class="mb-8 mx-3 my-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:px-15">
-      <article class="card bg-base-100 shadow-sm">
-        <figure><img class="h-auto w-full object-cover" src="img/matepersonalizado1-2.webp" alt="DIA DEL PADRE" /></figure>
-        <div class="card-body items-center text-center">
-          <p class="text-sm font-semibold tracking-wide text-gray-800">PERSONALIZADO MUNDIAL 2026 - IMPERIAL CUERO TALLADO</p>
-          <p class="text-base font-bold text-gray-900">$35.000</p>
-          <p class="text-xs text-gray-500">$28.000 con transferencia o deposito</p>
-          <div class="card-actions mt-2 items-center gap-2">
-            <a href="/product-details/personalizado1.html" class="btn btn-link px-0">Comprar</a>
-            <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="" />
-          </div>
+    
+    <div class="drawer-side z-50">
+      <label for="mobile-drawer" aria-label="cerrar menú" class="drawer-overlay"></label>
+      <ul class="menu bg-white min-h-full w-80 p-6 gap-4 text-base">
+        <li><a href="#" aria-current="page" class="nav-links">Inicio</a></li>
+        <li>
+          <a href="#productos" class="nav-links flex items-center justify-between">
+            Productos
+            <img src="img/arrow-right-svgrepo-com.svg" alt="" class="h-6 w-6">
+          </a>
+        </li>
+        <li><a href="#" class="nav-links">Tips</a></li>
+        <li><a href="#" class="nav-links">Contacto</a></li>
+      </ul>
+      <div class="fixed bottom-0 left-0 w-80 bg-white p-4">
+        <hr class="my-2 border-gray-300/50">
+        <div class="flex items-center gap-x-6">
+          <a href="#" class="text-xs nav-links">Iniciar Sesion</a>
+          <a href="#" class="text-xs nav-links">Crear Cuenta</a>
         </div>
-      </article>
-      <article class="card bg-base-100 shadow-sm">
-        <figure><img class="h-auto w-full object-cover" src="img/mategrabadoalgarrobo.webp" alt="DIA DEL PADRE" /></figure>
-        <div class="card-body items-center text-center">
-          <p class="text-sm font-semibold tracking-wide text-gray-800">PERSONALIZADO MUNDIAL ARGENTINA - IMPERIAL ALGARROBO</p>
-          <p class="text-base font-bold text-gray-900">$30.000</p>
-          <p class="text-xs text-gray-500">$28.000 con transferencia o deposito</p>
-          <div class="card-actions mt-2 items-center gap-2">
-            <a href="/product-details/personalizado1.html" class="btn btn-link px-0">Comprar</a>
-            <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="" />
-          </div>
-        </div>
-      </article>
-      <article class="card bg-base-100 shadow-sm">
-        <figure><img class="h-auto w-full object-cover" src="img/cuerocrudo.png" alt="DIA DEL PADRE" /></figure>
-        <div class="card-body items-center text-center">
-          <p class="text-sm font-semibold tracking-wide text-gray-800 ">IMPERIAL CUERO CRUDO</p>
-          <p class="text-base font-bold text-gray-900">$55.000</p>
-          <p class="text-xs text-gray-500">49.500$ con transferencia o deposito</p>
-          <div class="card-actions mt-2 items-center gap-2">
-            <a href="/product-details/personalizado1.html" class="btn btn-link px-0">Comprar</a>
-            <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="" />
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <section>
-      <div class="mt-20 w-full">
-        <h2 class="mx-auto text-center text-xl text-primary">Novedades</h2>
       </div>
-      <div class="mx-3 my-2 mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:px-15">
-        <article class="card bg-base-100 shadow-sm">
-          <figure><img class="h-auto w-full object-cover" src="img/matepersonalizado1-2.webp" alt="DIA DEL PADRE" /></figure>
-          <div class="card-body items-center text-center">
-            <p class="text-sm font-semibold tracking-wide text-gray-800">PERSONALIZADO MUNDIAL 2026 - IMPERIAL CUERO TALLADO</p>
-            <p class="text-base font-bold text-gray-900">$35.000</p>
-            <p class="text-xs text-gray-500">$28.000 con transferencia o deposito</p>
-            <div class="card-actions mt-2 items-center gap-2">
-              <a href="/product-details/personalizado1.html" class="btn btn-link px-0">Comprar</a>
-              <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="" />
-            </div>
-          </div>
-        </article>
-        <article class="card bg-base-100 shadow-sm">
-        <figure><img class="h-auto w-full object-cover" src="img/mategrabadoalgarrobo.webp" alt="DIA DEL PADRE" /></figure>
-        <div class="card-body items-center text-center">
-          <p class="text-sm font-semibold tracking-wide text-gray-800">PERSONALIZADO MUNDIAL ARGENTINA - IMPERIAL ALGARROBO</p>
-          <p class="text-base font-bold text-gray-900">$30.000</p>
-          <p class="text-xs text-gray-500">$28.000 con transferencia o deposito</p>
-          <div class="card-actions mt-2 items-center gap-2">
-            <a href="/product-details/personalizado1.html" class="btn btn-link px-0">Comprar</a>
-            <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="" />
-          </div>
-        </article>
-         <article class="card bg-base-100 shadow-sm">
-        <figure><img class="h-auto w-full object-cover" src="img/cuerocrudo.png" alt="DIA DEL PADRE" /></figure>
-        <div class="card-body items-center text-center">
-          <p class="text-sm font-semibold tracking-wide text-gray-800 ">IMPERIAL CUERO CRUDO</p>
-          <p class="text-base font-bold text-gray-900">$55.000</p>
-          <p class="text-xs text-gray-500">49.500$ con transferencia o deposito</p>
-          <div class="card-actions mt-2 items-center gap-2">
-            <a href="/product-details/personalizado1.html" class="btn btn-link px-0">Comprar</a>
-            <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="" />
-          </div>
-        </div>
-          </div>
-        </article>
-      </div>
-      <div class="mx-auto my-8 flex justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-6 size-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
-        </svg>
-        <span>1</span>
-        <span class="mx-1">/</span>
-        <span>8</span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-6 size-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-        </svg>
-      </div>
-    </section>
-  </section>
-
-  <section class="h-full bg-base-100">
-    <article class="relative flex h-80 flex-col justify-center gap-6 border bg-base-200 px-4 md:hidden">
-      <div class="mx-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package">
-          <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
-          <path d="M12 22V12" /><polyline points="3.29 7 12 12 20.71 7" /><path d="m7.5 4.27 9 5.15" />
-        </svg>
-      </div>
-      <div class="mx-auto text-center">
-        <p class="mb-2 text-2xl">ENVIOS A TODO EL PAIS</p>
-        <span>compra sin salir de tu casa</span>
-      </div>
-      <div class="mx-auto flex flex-row gap-x-8">
-        <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" /></svg></div>
-        <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" /></svg></div>
-      </div>
-    </article>
-
-    <section class="hidden gap-6 bg-base-200 px-4 py-6 md:grid md:grid-cols-3 md:px-20">
-      <article class="flex h-80 flex-col justify-center gap-6 py-8">
-        <div class="mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package">
-            <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
-            <path d="M12 22V12" /><polyline points="3.29 7 12 12 20.71 7" /><path d="m7.5 4.27 9 5.15" />
-          </svg>
-        </div>
-        <div class="text-center">
-          <p class="mb-2 text-2xl">ENVIOS A TODO EL PAIS</p>
-          <span>compra sin salir de tu casa</span>
-        </div>
-      </article>
-      <article class="flex h-80 flex-col justify-center gap-6 py-8">
-        <div class="mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet-minimal-icon lucide-wallet-minimal">
-            <path d="M17 14h.01" />
-            <path d="M7 7h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14" />
-          </svg>
-        </div>
-        <div class="text-center">
-          <p class="mb-2 text-2xl">HASTA 3 CUOTAS</p>
-          <span>con todas las tarjetas</span>
-        </div>
-      </article>
-      <article class="flex h-80 flex-col justify-center gap-6 py-8">
-        <div class="mx-auto">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-keyhole-icon lucide-lock-keyhole"><circle cx="12" cy="16" r="1" />
-            <rect x="3" y="10" width="18" height="12" rx="2" />
-            <path d="M7 10V7a5 5 0 0 1 10 0v3" />
-          </svg>
-        </div>
-        <div class="text-center">
-          <p class="mb-2 text-2xl">COMPRA SEGURA</p>
-          <span>protegemos tus datos</span>
-        </div>
-      </article>
-    </section>
-  </section>
-
-  <footer class="footer footer-center bg-primary px-4 py-6 text-primary-content ">
-    <div class="flex flex-col justify-center gap-y-8">
-      <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="mx-auto h-10" />
-      <i class="fa-brands fa-instagram"></i>
-      <span class="text-sm">543584394590</span>
-      <span class="text-sm">3584394590</span>
-      <span class="text-sm">amatear.cba.ar@gmail.com</span>
-      <span class="text-sm">Colon 753</span>
     </div>
-    <p class="mt-10 text-xs">© 2024 AMATEAR.CBA Todos los derechos reservados.</p>
-    <a href="https://api.whatsapp.com/send/?phone=5493584394590&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-circle fixed bottom-6 right-4 z-50">
-      <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
-  </footer>
+  </div>
+
 </body>
 </html>
