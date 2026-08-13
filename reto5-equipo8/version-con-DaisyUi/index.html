@@ -58,20 +58,15 @@
           </div>
         </div>
       </header>
-
-      
-      <main class="pt-27">
-
-        
-        <section class="carousel w-full">
+      <section class="carousel w-full">
           <div id="slide1" class="carousel-item w-full">
             <img src="img/1img-banner.webp" class="w-full object-cover" alt="Banner AMATEAR 1">
           </div>
           <div id="slide2" class="carousel-item w-full md:hidden">
             <img src="img/2img-banner.webp" class="w-full object-cover" alt="Banner AMATEAR 2">
           </div>
-        </section>
-        <div class="flex md:hidden justify-center items-center gap-6 my-6">
+      </section>
+      <div class="flex md:hidden justify-center items-center gap-6 my-6">
           <a href="#slide1" class="btn btn-circle btn-ghost btn-sm">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
@@ -83,36 +78,34 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>
           </a>
-        </div>
-
+      </div>
         
-        <section class="md:flex md:flex-col md:mx-25">
-          <div class="mx-3 my-4 md:px-15">
-            <div class="hero h-50 md:h-auto md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/diadelpadre-amatear.jpeg); background-size:cover; background-position:center;">
+      <main class="card pt-2 md:pt-20 md:mx-25 md:px-15">
+          <div class="mx-3 my-4 ">
+            <div class="hero h-50 md:h-auto md:object-cover md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/diadelpadre-amatear.jpeg); background-size:cover; background-position:center;">
             </div>
           </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-3 md:gap-1">
-            <div class="hero h-40 md:h-40 md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/promos.webp); background-size:cover; background-position:center;">
-              <div class="hero-overlay"></div>
+          <section class="md:flex md:flex-col md:mx-25">
+            <section class="grid grid-cols-1 gap-4 mx-3 md:grid-cols-3  md:gap-1">
+              <div class="hero h-40 md:h-40 md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/promos.webp); background-size:cover; background-position:center;">
+                <div class="hero-overlay"></div>
               <div class="hero-content text-center">
                 <p class="paytoneOne verde text-3xl font-bold text-white">PROMOS</p>
               </div>
-            </div>
-            <div class="hero h-40 md:h-40 md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/mates.webp); background-size:cover; background-position:center;">
-              <div class="hero-overlay bg-gray-500/40"></div>
+              </div>
+              <div class="hero h-40 md:h-40 md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/mates.webp); background-size:cover; background-position:center;">
+                <div class="hero-overlay bg-gray-500/40"></div>
               <div class="hero-content text-center">
                 <p class="paytoneOne verde text-3xl font-bold text-white">MATES</p>
               </div>
-            </div>
-            <div class="hero h-40 md:h-40 md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/termos.webp); background-size:cover; background-position:center;">
-              <div class="hero-overlay"></div>
-              <div class="hero-content text-center">
-                <p class="paytoneOne verde text-3xl font-bold text-white">TERMOS</p>
               </div>
-            </div>
-          </div>
-
+              <div class="hero h-40 md:h-40 md:transition md:duration-300 md:hover:scale-105" style="background-image:url(img/termos.webp); background-size:cover; background-position:center;">
+                <div class="hero-overlay"></div>
+                <div class="hero-content text-center">
+                  <p class="paytoneOne verde text-3xl font-bold text-white">TERMOS</p>
+                </div>
+              </div>
+          </section>
           
           <section class="my-16 w-full">
             <h2 class="nav-links mx-10 text-center">
@@ -121,7 +114,7 @@
           </section>
 
           
-          <section id="productos" class="grid grid-cols-2 md:grid-cols-3 gap-4 mx-3 my-4 md:px-15 mb-8">
+          <section id="productos" class="grid grid-cols-2 md:grid-cols-3 gap-4 mx-3 my-4  mb-8">
             <div class="card bg-base-100">
               <figure class="h-50 md:h-auto overflow-hidden">
                 <img class="w-full object-cover" src="img/matepersonalizado1-2.webp" alt="PERSONALIZADO MUNDIAL 2026">
@@ -131,7 +124,7 @@
                 <p class="nav-links text-sm">$35.000</p>
                 <p class="nav-links text-xs">$28.000 con transferencia o deposito</p>
                 <div class="card-actions items-center gap-2">
-                  <a href="personalizado1.html" class="nav-links underline text-sm">Comprar</a>
+                  <a href="/product-details/personalizado1.html" class="nav-links underline text-sm">Comprar</a>
                   <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
                 </div>
               </div>
@@ -145,7 +138,7 @@
                 <p class="nav-links text-sm">$45.000</p>
                 <p class="nav-links text-xs">$36.000 con transferencia o deposito</p>
                 <div class="card-actions items-center gap-2">
-                  <a href="cuerocrudo.html" class="nav-links underline text-sm">Comprar</a>
+                  <a href="/product-details/cuerocrudo.html" class="nav-links underline text-sm">Comprar</a>
                   <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
                 </div>
               </div>
@@ -159,7 +152,7 @@
                 <p class="nav-links text-sm">$30.000</p>
                 <p class="nav-links text-xs">$24.000 con transferencia o deposito</p>
                 <div class="card-actions items-center gap-2">
-                  <a href="Algarrobograbado.html" class="nav-links underline text-sm">Comprar</a>
+                  <a href="/product-details/Algarrobograbado.html" class="nav-links underline text-sm">Comprar</a>
                   <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
                 </div>
               </div>
@@ -171,7 +164,7 @@
             <div class="mt-8 w-full">
               <h2 class="verde text-xl text-center">Novedades</h2>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mx-3 mt-8 my-2 md:px-15">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mx-3 mt-8 my-2 ">
               <div class="card bg-base-100">
                 <figure class="h-50 md:h-auto overflow-hidden">
                   <img class="w-full object-cover" src="img/matepersonalizado1-2.webp" alt="PERSONALIZADO MUNDIAL 2026">
@@ -181,7 +174,7 @@
                   <p class="nav-links text-sm">$35.000,00</p>
                   <p class="nav-links text-xs">$28.000,00 con transferencia o deposito</p>
                   <div class="card-actions items-center gap-2">
-                    <a href="personalizado1.html" class="nav-links underline text-sm">Comprar</a>
+                    <a href="/product-details/personalizado1.html" class="nav-links underline text-sm">Comprar</a>
                     <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
                   </div>
                 </div>
@@ -195,7 +188,7 @@
                   <p class="nav-links text-sm">$35.000,00</p>
                   <p class="nav-links text-xs">$28.000,00 con transferencia o deposito</p>
                   <div class="card-actions items-center gap-2">
-                    <a href="personalizado1.html" class="nav-links underline text-sm">Comprar</a>
+                    <a href="/product-details/personalizado1.html" class="nav-links underline text-sm">Comprar</a>
                     <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
                   </div>
                 </div>
@@ -209,7 +202,7 @@
                   <p class="nav-links text-sm">$35.000,00</p>
                   <p class="nav-links text-xs">$28.000,00 con transferencia o deposito</p>
                   <div class="card-actions items-center gap-2">
-                    <a href="personalizado1.html" class="nav-links underline text-sm">Comprar</a>
+                    <a href="/product-details/personalizado1.html" class="nav-links underline text-sm">Comprar</a>
                     <img class="h-4 w-4" src="img/bag-3-svgrepo-com.svg" alt="">
                   </div>
                 </div>
@@ -226,10 +219,10 @@
             </div>
           </section>
         </section>
-
+      </main>
         
-        <section class="bg-white">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 bg-gray-100 py-10">
+      <section class="bg-white">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 md:mx-auto bg-gray-100 py-10">
             <div class="flex flex-col items-center justify-center gap-4 text-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/>
@@ -256,11 +249,9 @@
               <span>protegemos tus datos</span>
             </div>
           </div>
-        </section>
-      </main>
+      </section>
 
-      
-      <footer class="footer footer-color footer-center text-white p-10 gap-4">
+      <footer class="footer footer-color footer-center flex flex-col text-white p-10 gap-4">
         <img src="img/logo-amatear.jpeg" alt="Logo AMATEAR" class="h-10">
         <i class="fa-brands fa-instagram text-lg"></i>
         <span class="text-sm">543584394590</span>
@@ -273,10 +264,9 @@
       
       <a href="https://api.whatsapp.com/send/?phone=5493584394590&text&type=phone_number&app_absent=0"
          target="_blank" rel="noopener noreferrer"
-         class="btn btn-circle btn-success fixed bottom-6 right-4 z-50 shadow-lg hover:scale-110 transition-all duration-300">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
+         class="btn btn-circle btn-success rounded-full fixed bottom-6 right-4 z-50 shadow-lg hover:scale-110 transition-all duration-300">
+        <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
       </a>
-
     </div>
 
     
