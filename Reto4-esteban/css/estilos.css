@@ -1,0 +1,401 @@
+/* =========================================================
+   RETO 4 - Upgrade del Reto 3
+   Estrategia: Mobile-First (estilos base = celular,
+   la media query min-width: 768px agrega la vista desktop)
+   ========================================================= */
+
+/* ---------- Paso 1: Reseteo universal del modelo de caja ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Variables ---------- */
+:root {
+  --color-primario: #7ACC2D;
+  --color-primario-hover: #68b226;
+  --background-white: #ffffff;
+  --color-secundario: #131313;
+  --color-fondo: #f5f6f8;
+  --fuente-principal: 'Open Sans', sans-serif;
+  --otras: #ececec;
+  --texto-claro: #616161;
+  --borde-card: #e2e8f0;
+  --radius: 8px;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: var(--fuente-principal);
+  background-color: var(--background-white);
+  color: var(--color-secundario);
+  overflow-x: hidden; /* sin scroll horizontal */
+}
+
+img {
+  max-width: 100%; /* las imágenes nunca desbordan */
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Paso 2: Sistema de grillas ---------- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Separación limpia entre tarjetas */
+}
+
+/* Vista Base: Celulares (ocupan todo el ancho) */
+.col-12 {
+  width: 100%;
+}
+
+/* ---------- Header / Navegación ---------- */
+.site-header {
+  background-color: var(--color-primario);
+}
+
+.top-nav {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column; /* celular: logo arriba, links abajo */
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  display: inline-block;
+  color: var(--color-secundario);
+  font-weight: 300;
+  font-size: 16px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+/* ---------- Main ---------- */
+main {
+  padding: 32px 15px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-copy {
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+/* ---------- Productos ---------- */
+.product-cards {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* celular: apiladas */
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.background-products {
+  display: none; /* la curva decorativa sólo se muestra en desktop */
+}
+
+.product-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  background-color: var(--background-white);
+  border: 1px solid var(--borde-card);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.product-card img {
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card h2 {
+  font-size: 18px;
+}
+
+.product-card p {
+  color: var(--texto-claro);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ---------- Botones (Paso 3) ---------- */
+.cta-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: var(--radius);
+  background-color: var(--color-primario);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 3px 0 var(--color-primario-hover);
+  /* transición declarada en el estado base, sin usar 'all' */
+  transition: background-color 0.3s ease, transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: var(--color-primario-hover);
+  transform: translateY(1px); /* se "hunde" levemente */
+  box-shadow: 0 1px 0 var(--color-primario-hover);
+}
+
+.cta-button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* ---------- Tarjetas (Paso 3) ---------- */
+.card {
+  background-color: #ffffff;
+  border: 1px solid var(--borde-card);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* Regla de oro: la transición se declara en el estado base */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* se eleva 5 píxeles */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* sombra más profunda */
+}
+
+/* ---------- Beneficios (tarjetas con grilla) ---------- */
+.feature-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-card img {
+  width: 90px;
+  height: auto;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+}
+
+.feature-card p {
+  color: var(--texto-claro);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ---------- Menciones ---------- */
+.mentions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--otras);
+}
+
+.section-header {
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.section-header h2 {
+  font-size: 23px;
+}
+
+.mention-cards {
+  display: flex;
+  flex-direction: column; /* celular: apiladas */
+  gap: 20px;
+}
+
+.mention-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background-color: var(--background-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mention-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mention-card img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.mention-content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 8px;
+}
+
+.mention-content h3 {
+  font-size: 18px;
+}
+
+.mention-content p {
+  color: var(--texto-claro);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  width: 100%;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column; /* celular: una línea debajo de la otra */
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #0f0f0f;
+}
+
+.site-footer p {
+  font-size: 15px;
+}
+
+/* =========================================================
+   VISTA DESKTOP / TABLET (Mobile-First -> min-width)
+   ========================================================= */
+@media (min-width: 768px) {
+
+  /* Grilla: 3 columnas perfectas */
+  .col-md-4 {
+    width: calc(33.333% - 14px); /* restamos el espacio proporcional del gap */
+  }
+
+  .top-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    gap: 32px;
+  }
+
+  main {
+    padding: 40px 24px 64px;
+    gap: 48px;
+  }
+
+  .hero {
+    min-height: 400px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .product-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .background-products {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .background-products img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-card {
+    width: 35%;
+  }
+
+  .highlights {
+    margin-top: 80px;
+  }
+
+  .mention-cards {
+    flex-direction: row;
+  }
+
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
